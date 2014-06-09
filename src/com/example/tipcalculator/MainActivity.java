@@ -1,5 +1,9 @@
 package com.example.tipcalculator;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -7,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	public EditText etAddAmt;
@@ -32,12 +37,19 @@ public class MainActivity extends Activity {
 		btn10press.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-	        // Do something here  
+	        // get the value from the input textfield numbers
 				String amt = etAddAmt.getText().toString();
-				Double amount = Double.parseDouble(amt);
-				Double valAmt = amount*.1;
-				String tip = Double.toString(valAmt);
-				totalPay.setText(tip);
+						Double amount = Double.parseDouble(amt);
+						Double valAmt = amount*.1;
+
+						// Limit the tip amount to 2 decimal places.
+						DecimalFormat newFormat = new DecimalFormat("#.##");
+						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
+						String tip = Double.toString(twoDecimal);
+						
+						// Display the calculated tip amt to the screen
+						totalPay.setText(tip);
+				
 			}
 		});
 		
@@ -48,7 +60,13 @@ public class MainActivity extends Activity {
 				String amt = etAddAmt.getText().toString();
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.15;
-				String tip = Double.toString(valAmt);
+
+				// Limit the tip amount to 2 decimal places.
+				DecimalFormat newFormat = new DecimalFormat("#.##");
+				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
+				String tip = Double.toString(twoDecimal);
+				
+				// Display the calculated tip amt to the screen	
 				totalPay.setText(tip);
 			}			
 		});
@@ -60,7 +78,12 @@ public class MainActivity extends Activity {
 				String amt = etAddAmt.getText().toString();
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.2;
-				String tip = Double.toString(valAmt);
+				
+				// Limit the tip amount to 2 decimal places.
+				DecimalFormat newFormat = new DecimalFormat("#.##");
+				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
+				String tip = Double.toString(twoDecimal);
+				// Display the calculated tip amt to the screen
 				totalPay.setText(tip);
 			}			
 		});

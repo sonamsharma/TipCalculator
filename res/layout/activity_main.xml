@@ -16,7 +16,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="@string/hint_label" >
+        android:hint="@string/hint_label"
+        android:inputType="number|numberDecimal" >
 
         <requestFocus />
     </EditText>
@@ -66,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvTipIs"
         android:layout_alignBottom="@+id/tvTipIs"
-        android:layout_toLeftOf="@+id/btn20"
+        android:layout_alignRight="@+id/btn20"
         android:text="@string/tv_TotalPay"
         android:textSize="22sp" />
 
