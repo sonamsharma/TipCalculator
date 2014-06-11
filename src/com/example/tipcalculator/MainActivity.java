@@ -17,6 +17,8 @@ public class MainActivity extends Activity {
 	public Button btn15press;
 	public Button btn20press;
 	public TextView totalPay;
+	public TextView totalToPay;
+	
 	int flag;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends Activity {
 		
 		etAddAmt = (EditText) findViewById(R.id.addAmt);
 		totalPay = (TextView) findViewById(R.id.totalPay);
+		totalToPay = (TextView) findViewById(R.id.totalToPay);
 		btn10press = (Button) findViewById(R.id.btn10); 
 		btn10press.setEnabled(false);
 		btn15press = (Button) findViewById(R.id.btn15); 
@@ -67,6 +70,7 @@ public class MainActivity extends Activity {
 			    	btn15press.setEnabled(false);
 			    	btn20press.setEnabled(false);
 			    	totalPay.setText("0.0");
+			    	totalToPay.setText("0.0");
 			    	
 		    		return;
 		    	}
@@ -104,14 +108,16 @@ public class MainActivity extends Activity {
 				}
 						Double amount = Double.parseDouble(amt);
 						Double valAmt = amount*.1;
-
+						
 						// Limit the tip amount to 2 decimal places.
 						DecimalFormat newFormat = new DecimalFormat("#.##");
 						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
 						String tip = Double.toString(twoDecimal);
-						
+						Double totalamt = amount + twoDecimal;
+						String addedAmtPay = Double.toString(totalamt);
 						// Display the calculated tip amt to the screen
 						totalPay.setText(tip);
+						totalToPay.setText(addedAmtPay);
 				
 			}
 		});
@@ -128,16 +134,19 @@ public class MainActivity extends Activity {
 				if(amt == null|| amt == ""){
 					return;
 				}
+
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.15;
-
+				
 				// Limit the tip amount to 2 decimal places.
 				DecimalFormat newFormat = new DecimalFormat("#.##");
 				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
 				String tip = Double.toString(twoDecimal);
-				
-				// Display the calculated tip amt to the screen	
+				Double totalamt = amount + twoDecimal;
+				String addedAmtPay = Double.toString(totalamt);
+				// Display the calculated tip amt to the screen
 				totalPay.setText(tip);
+				totalToPay.setText(addedAmtPay);
 			}			
 		});
 		
@@ -152,6 +161,7 @@ public class MainActivity extends Activity {
 				if(amt == null|| amt == ""){
 					return;
 				}
+
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.2;
 				
@@ -159,8 +169,11 @@ public class MainActivity extends Activity {
 				DecimalFormat newFormat = new DecimalFormat("#.##");
 				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
 				String tip = Double.toString(twoDecimal);
+				Double totalamt = amount + twoDecimal;
+				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
 				totalPay.setText(tip);
+				totalToPay.setText(addedAmtPay);
 			}			
 		});
 	} 
@@ -173,16 +186,19 @@ public class MainActivity extends Activity {
 				if(amt == null|| amt == ""){
 					return;
 				}
-						Double amount = Double.parseDouble(amt);
-						Double valAmt = amount*.1;
 
-						// Limit the tip amount to 2 decimal places.
-						DecimalFormat newFormat = new DecimalFormat("#.##");
-						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
-						String tip = Double.toString(twoDecimal);
-						
-						// Display the calculated tip amt to the screen
-						totalPay.setText(tip);
+				Double amount = Double.parseDouble(amt);
+				Double valAmt = amount*.1;
+				
+				// Limit the tip amount to 2 decimal places.
+				DecimalFormat newFormat = new DecimalFormat("#.##");
+				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
+				String tip = Double.toString(twoDecimal);
+				Double totalamt = amount + twoDecimal;
+				String addedAmtPay = Double.toString(totalamt);
+				// Display the calculated tip amt to the screen
+				totalPay.setText(tip);
+				totalToPay.setText(addedAmtPay);
 	}
 	
 	private void secondBtnPress(){
@@ -195,16 +211,19 @@ public class MainActivity extends Activity {
 				if(amt == null|| amt == ""){
 					return;
 				}
+
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.15;
-
+				
 				// Limit the tip amount to 2 decimal places.
 				DecimalFormat newFormat = new DecimalFormat("#.##");
 				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
 				String tip = Double.toString(twoDecimal);
-				
-				// Display the calculated tip amt to the screen	
+				Double totalamt = amount + twoDecimal;
+				String addedAmtPay = Double.toString(totalamt);
+				// Display the calculated tip amt to the screen
 				totalPay.setText(tip);
+				totalToPay.setText(addedAmtPay);
 		
 	}
 	private void thirdBtnPress(){
@@ -215,6 +234,7 @@ public class MainActivity extends Activity {
 				if(amt == null|| amt == ""){
 					return;
 				}
+
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.2;
 				
@@ -222,8 +242,11 @@ public class MainActivity extends Activity {
 				DecimalFormat newFormat = new DecimalFormat("#.##");
 				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
 				String tip = Double.toString(twoDecimal);
+				Double totalamt = amount + twoDecimal;
+				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
 				totalPay.setText(tip);
+				totalToPay.setText(addedAmtPay);
 	}
 
 	@Override

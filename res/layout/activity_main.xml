@@ -22,33 +22,8 @@
 
         <requestFocus />
     </EditText>
-
-    <Button
-        android:id="@+id/btn10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/addAmt"
-        android:layout_below="@+id/addAmt"
-        android:layout_marginTop="64dp"
-        android:text="@string/btLabel_10" />
-
-    <Button
-        android:id="@+id/btn15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn10"
-        android:layout_alignBottom="@+id/btn10"
-        android:layout_toRightOf="@+id/btn10"
-        android:text="@string/btLabel_15" />
-
-    <Button
-        android:id="@+id/btn20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn15"
-        android:layout_alignBottom="@+id/btn15"
-        android:layout_toRightOf="@+id/btn15"
-        android:text="@string/btLabel_20" />
+    
+    
 
     <TextView
         android:id="@+id/tvTipIs"
@@ -60,14 +35,57 @@
         android:text="@string/tvLabel_TipIs"
         android:textSize="22sp" />
 
+    <Button
+        android:id="@+id/btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addAmt"
+        android:layout_below="@+id/addAmt"
+        android:layout_marginTop="30dp"
+        android:text="@string/btLabel_10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTipIs"
+        android:layout_below="@+id/tvTipIs"
+        android:layout_marginTop="23dp"
+        android:text="@string/tvLabel_TotalAmtPay"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/totalToPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/totalPay"
+        android:text="@string/tv_TotalAmtPay"
+        android:textSize="22sp" />
+
     <TextView
         android:id="@+id/totalPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvTipIs"
-        android:layout_alignBottom="@+id/tvTipIs"
-        android:layout_alignRight="@+id/btn20"
+        android:layout_above="@+id/textView1"
+        android:layout_alignRight="@+id/addAmt"
         android:text="@string/tv_TotalPay"
         android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btn20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTipIs"
+        android:layout_alignRight="@+id/addAmt"
+        android:text="@string/btLabel_20" />
+
+    <Button
+        android:id="@+id/btn15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTipIs"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btLabel_15" />
 
 </RelativeLayout>
