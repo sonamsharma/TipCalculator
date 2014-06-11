@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 	public Button btn10press;
 	public Button btn15press;
 	public Button btn20press;
-	public TextView totalPay;
+	public TextView tipPay;
 	public TextView totalToPay;
 	
 	int flag;
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		etAddAmt = (EditText) findViewById(R.id.addAmt);
-		totalPay = (TextView) findViewById(R.id.totalPay);
+		tipPay = (TextView) findViewById(R.id.tipPay);
 		totalToPay = (TextView) findViewById(R.id.totalToPay);
 		btn10press = (Button) findViewById(R.id.btn10); 
 		btn10press.setEnabled(false);
@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
 		    		btn10press.setEnabled(false);
 			    	btn15press.setEnabled(false);
 			    	btn20press.setEnabled(false);
-			    	totalPay.setText("0.0");
+			    	tipPay.setText("0.0");
 			    	totalToPay.setText("0.0");
 			    	
 		    		return;
@@ -116,7 +116,7 @@ public class MainActivity extends Activity {
 						Double totalamt = amount + twoDecimal;
 						String addedAmtPay = Double.toString(totalamt);
 						// Display the calculated tip amt to the screen
-						totalPay.setText(tip);
+						tipPay.setText(tip);
 						totalToPay.setText(addedAmtPay);
 				
 			}
@@ -145,7 +145,7 @@ public class MainActivity extends Activity {
 				Double totalamt = amount + twoDecimal;
 				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
-				totalPay.setText(tip);
+				tipPay.setText(tip);
 				totalToPay.setText(addedAmtPay);
 			}			
 		});
@@ -172,7 +172,7 @@ public class MainActivity extends Activity {
 				Double totalamt = amount + twoDecimal;
 				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
-				totalPay.setText(tip);
+				tipPay.setText(tip);
 				totalToPay.setText(addedAmtPay);
 			}			
 		});
@@ -197,7 +197,7 @@ public class MainActivity extends Activity {
 				Double totalamt = amount + twoDecimal;
 				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
-				totalPay.setText(tip);
+				tipPay.setText(tip);
 				totalToPay.setText(addedAmtPay);
 	}
 	
@@ -222,7 +222,7 @@ public class MainActivity extends Activity {
 				Double totalamt = amount + twoDecimal;
 				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
-				totalPay.setText(tip);
+				tipPay.setText(tip);
 				totalToPay.setText(addedAmtPay);
 		
 	}
@@ -245,7 +245,7 @@ public class MainActivity extends Activity {
 				Double totalamt = amount + twoDecimal;
 				String addedAmtPay = Double.toString(totalamt);
 				// Display the calculated tip amt to the screen
-				totalPay.setText(tip);
+				tipPay.setText(tip);
 				totalToPay.setText(addedAmtPay);
 	}
 

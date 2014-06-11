@@ -45,7 +45,7 @@
         android:text="@string/btLabel_10" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvlabel_totalpay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tvTipIs"
@@ -58,16 +58,16 @@
         android:id="@+id/totalToPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignLeft="@+id/totalPay"
+        android:layout_alignBottom="@+id/tvlabel_totalpay"
+        android:layout_alignLeft="@+id/tipPay"
         android:text="@string/tv_TotalAmtPay"
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/totalPay"
+        android:id="@+id/tipPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
+        android:layout_above="@+id/tvlabel_totalpay"
         android:layout_alignRight="@+id/addAmt"
         android:text="@string/tv_TotalPay"
         android:textSize="22sp" />
