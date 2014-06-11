@@ -15,3 +15,6 @@ Required:Upon selecting tip amount, formatted tip value is displayed
 Optional:User changes the total amount and updated tip is reflected automatically
 Optional:User can also see the total amount to pay after the tip is being calculated
 
+![tiprecord2](https://cloud.githubusercontent.com/assets/4516012/3239751/0f14482c-f114-11e3-9e1e-adf43a8aa9fd.gif)
+
+
