@@ -24,14 +24,19 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
+        public static final int action_settings=0x7f08000d;
         public static final int addAmt=0x7f080000;
         public static final int btn10=0x7f080002;
         public static final int btn15=0x7f080007;
         public static final int btn20=0x7f080006;
+        public static final int seekBar=0x7f080008;
         public static final int tipPay=0x7f080005;
         public static final int totalToPay=0x7f080004;
         public static final int tvTipIs=0x7f080001;
+        public static final int tv_eachPay=0x7f08000c;
+        public static final int tv_label_eachpay=0x7f08000b;
+        public static final int tv_seekbar=0x7f080009;
+        public static final int tv_splitvalue=0x7f08000a;
         public static final int tvlabel_totalpay=0x7f080003;
     }
     public static final class layout {
@@ -47,10 +52,13 @@ public final class R {
         public static final int btLabel_15=0x7f050004;
         public static final int btLabel_20=0x7f050005;
         public static final int hint_label=0x7f050002;
+        public static final int splitValue=0x7f05000b;
+        public static final int split_label=0x7f05000a;
         public static final int tvLabel_TipIs=0x7f050006;
         public static final int tvLabel_TotalAmtPay=0x7f050008;
         public static final int tv_TotalAmtPay=0x7f050009;
         public static final int tv_TotalPay=0x7f050007;
+        public static final int tv_label_eachPay=0x7f05000c;
     }
     public static final class style {
         /** 

@@ -23,8 +23,6 @@
         <requestFocus />
     </EditText>
     
-    
-
     <TextView
         android:id="@+id/tvTipIs"
         android:layout_width="wrap_content"
@@ -33,7 +31,7 @@
         android:layout_below="@+id/btn10"
         android:layout_marginTop="78dp"
         android:text="@string/tvLabel_TipIs"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn10"
@@ -52,7 +50,7 @@
         android:layout_below="@+id/tvTipIs"
         android:layout_marginTop="23dp"
         android:text="@string/tvLabel_TotalAmtPay"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/totalToPay"
@@ -87,5 +85,50 @@
         android:layout_above="@+id/tvTipIs"
         android:layout_centerHorizontal="true"
         android:text="@string/btLabel_15" />
+
+   <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tipPay"
+        android:max="100"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignLeft="@+id/btn10"
+        android:text="@string/split_label"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_splitvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignRight="@+id/tvlabel_totalpay"
+        android:text="@string/splitValue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_label_eachpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvlabel_totalpay"
+        android:layout_below="@+id/tvlabel_totalpay"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_label_eachPay"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_eachPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_label_eachpay"
+        android:layout_alignLeft="@+id/totalToPay"
+        android:text="@string/tv_TotalAmtPay"
+        android:textSize="22sp" />
 
 </RelativeLayout>

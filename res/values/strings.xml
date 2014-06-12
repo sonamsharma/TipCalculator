@@ -11,5 +11,8 @@
     <string name="tv_TotalPay">0.0</string>
     <string name="tvLabel_TotalAmtPay">Total To Pay:</string>
     <string name="tv_TotalAmtPay">0.0</string>
+    <string name="split_label">split bill:</string>
+    <string name="splitValue">0</string>
+    <string name="tv_label_eachPay">"Each Pay Amount: "</string>
 
 </resources>
