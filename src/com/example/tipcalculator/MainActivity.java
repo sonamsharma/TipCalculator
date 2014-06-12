@@ -60,6 +60,13 @@ public class MainActivity extends Activity {
            Log.d("DEBUG", "Progress is: "+progress);
                            //set textView's text
            textProgress.setText(""+progress);
+           if(flag==1){
+	        	firstBtnPress();
+	        }if(flag==2){
+	        	secondBtnPress();
+	        }if(flag==3){
+	        	thirdBtnPress();
+	        }
            
 			}
 
@@ -140,34 +147,7 @@ public class MainActivity extends Activity {
 		btn10press.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// assign a flag to it when button 10% is clicked
-				flag = 1;
-	        // get the value from the input textfield numbers
-				String amt = etAddAmt.getText().toString();
-			// get the value from the splitter number 
-				String tvProgress = textProgress.getText().toString();
-				Double tvProgressinDouble = Double.parseDouble(tvProgress);
-				if(tvProgressinDouble == 0){
-					tvProgressinDouble = (double)1;
-				}
-				if(amt == null|| amt == ""){
-					return;
-				}
-						Double amount = Double.parseDouble(amt);
-						Double valAmt = amount*.1;
-						
-						// Limit the tip amount to 2 decimal places.
-						DecimalFormat newFormat = new DecimalFormat("#.##");
-						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
-						String tip = Double.toString(twoDecimal);
-						Double totalamt = amount + twoDecimal;
-						String totalAmtPay = Double.toString(Double.valueOf(newFormat.format(totalamt)));
-						Double totalAfterSplit = totalamt/tvProgressinDouble;
-						String eachPay = Double.toString(Double.valueOf(newFormat.format(totalAfterSplit)));
-						// Display the calculated tip amt to the screen
-						tipPay.setText(tip);
-						totalToPay.setText(totalAmtPay);
-						eachPayAmt.setText(eachPay);
+				firstBtnPress();
 				
 			}
 		});
@@ -175,36 +155,7 @@ public class MainActivity extends Activity {
 		btn15press.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
-	        // Do something here  
-				// assign a flag to it when button 15% is clicked
-				flag = 2;
-	        // get the value from the input textfield numbers
-				String amt = etAddAmt.getText().toString();
-			// get the value from the splitter number 
-				String tvProgress = textProgress.getText().toString();
-				Double tvProgressinDouble = Double.parseDouble(tvProgress);
-				if(tvProgressinDouble == 0){
-					tvProgressinDouble = (double)1;
-				}
-				if(amt == null|| amt == ""){
-					return;
-				}
-						Double amount = Double.parseDouble(amt);
-						Double valAmt = amount*.15;
-						
-						// Limit the tip amount to 2 decimal places.
-						DecimalFormat newFormat = new DecimalFormat("#.##");
-						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
-						String tip = Double.toString(twoDecimal);
-						Double totalamt = amount + twoDecimal;
-						String totalAmtPay = Double.toString(Double.valueOf(newFormat.format(totalamt)));
-						Double totalAfterSplit = totalamt/tvProgressinDouble;
-						String eachPay = Double.toString(Double.valueOf(newFormat.format(totalAfterSplit)));
-						// Display the calculated tip amt to the screen
-						tipPay.setText(tip);
-						totalToPay.setText(totalAmtPay);
-						eachPayAmt.setText(eachPay);
+				secondBtnPress();
 				
 			}			
 		});
@@ -212,37 +163,7 @@ public class MainActivity extends Activity {
 		btn20press.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-	        // Do something here  
-				
-				// assign a flag to it when button 20% is clicked
-				// assign a flag to it when button 10% is clicked
-				flag = 3;
-	        // get the value from the input textfield numbers
-				String amt = etAddAmt.getText().toString();
-			// get the value from the splitter number 
-				String tvProgress = textProgress.getText().toString();
-				Double tvProgressinDouble = Double.parseDouble(tvProgress);
-				if(tvProgressinDouble == 0){
-					tvProgressinDouble = (double)1;
-				}
-				if(amt == null|| amt == ""){
-					return;
-				}
-						Double amount = Double.parseDouble(amt);
-						Double valAmt = amount*.2;
-						
-						// Limit the tip amount to 2 decimal places.
-						DecimalFormat newFormat = new DecimalFormat("#.##");
-						double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
-						String tip = Double.toString(twoDecimal);
-						Double totalamt = amount + twoDecimal;
-						String totalAmtPay = Double.toString(Double.valueOf(newFormat.format(totalamt)));
-						Double totalAfterSplit = totalamt/tvProgressinDouble;
-						String eachPay = Double.toString(Double.valueOf(newFormat.format(totalAfterSplit)));
-						// Display the calculated tip amt to the screen
-						tipPay.setText(tip);
-						totalToPay.setText(totalAmtPay);
-						eachPayAmt.setText(eachPay);
+				thirdBtnPress();
 				
 			}			
 		});
@@ -254,18 +175,20 @@ public class MainActivity extends Activity {
 		flag = 1;
     // get the value from the input textfield numbers
 		String amt = etAddAmt.getText().toString();
+		//Log.d("DEBUG", "blank "+amt);
 	// get the value from the splitter number 
 		String tvProgress = textProgress.getText().toString();
 		Double tvProgressinDouble = Double.parseDouble(tvProgress);
 		if(tvProgressinDouble == 0){
 			tvProgressinDouble = (double)1;
 		}
-		if(amt == null|| amt == ""){
+		if(amt.length() == 0){
+			//Log.d("DEBUG", "text: "+amt);
 			return;
 		}
 				Double amount = Double.parseDouble(amt);
 				Double valAmt = amount*.1;
-				
+				//Log.d("DEBUG", "Amount: "+amt);
 				// Limit the tip amount to 2 decimal places.
 				DecimalFormat newFormat = new DecimalFormat("#.##");
 				double twoDecimal =  Double.valueOf(newFormat.format(valAmt));
@@ -295,7 +218,7 @@ public class MainActivity extends Activity {
 		if(tvProgressinDouble == 0){
 			tvProgressinDouble = (double)1;
 		}
-		if(amt == null|| amt == ""){
+		if(amt.length() == 0){
 			return;
 		}
 				Double amount = Double.parseDouble(amt);
@@ -328,7 +251,7 @@ public class MainActivity extends Activity {
 				if(tvProgressinDouble == 0){
 					tvProgressinDouble = (double)1;
 				}
-				if(amt == null|| amt == ""){
+				if(amt.length() == 0){
 					return;
 				}
 						Double amount = Double.parseDouble(amt);
